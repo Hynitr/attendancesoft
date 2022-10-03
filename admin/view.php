@@ -48,18 +48,18 @@ $row = mysqli_fetch_array($res);
                                 <option name="class" id="ressbj">Kindergarten</option>
                                 <option name="class" id="ressbj">Nursery 1</option>
                                 <option name="class" id="ressbj">Nursery 2</option>
-                                <option name="class" id="ressbj">Grade 1</option>
-                                <option name="class" id="ressbj">Grade 2</option>
-                                <option name="class" id="ressbj">Grade 3</option>
-                                <option name="class" id="ressbj">Grade 4</option>
-                                <option name="class" id="ressbj">Grade 5</option>
-                                <option name="class" id="ressbj">Grade 6</option>
-                                <option name="class" id="ressbj">J.S.S 1</option>
-                                <option name="class" id="ressbj">J.S.S 2</option>
-                                <option name="class" id="ressbj">J.S.S 3</option>
-                                <option name="class" id="ressbj">S.S.S 1</option>
-                                <option name="class" id="ressbj">S.S.S 2</option>
-                                <option name="class" id="ressbj">S.S.S 3</option>
+                                <option name="class" id="ressbj">Year 1</option>
+                                <option name="class" id="ressbj">Year 2</option>
+                                <option name="class" id="ressbj">Year 3</option>
+                                <option name="class" id="ressbj">Year 4</option>
+                                <option name="class" id="ressbj">Year 5</option>
+                                <option name="class" id="ressbj">Year 6</option>
+                                <option name="class" id="ressbj">Year 7</option>
+                                <option name="class" id="ressbj">Year 8</option>
+                                <option name="class" id="ressbj">Year 9</option>
+                                <option name="class" id="ressbj">Year 10</option>
+                                <option name="class" id="ressbj">Year 11</option>
+                                <option name="class" id="ressbj">Year 12</option>
                             </select>
                         </div>
 

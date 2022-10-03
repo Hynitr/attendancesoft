@@ -173,39 +173,39 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="./delstud?id=J.S.S 1" class="nav-link">
+                                            <a href="./delstud?id=Year 6" class="nav-link">
                                                 <i class="far fa-dot-circle nav-icon"></i>
-                                                <p>J.S.S 1</p>
+                                                <p>Year 6</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="./delstud?id=J.S.S 2" class="nav-link">
+                                            <a href="./delstud?id=Year 7" class="nav-link">
                                                 <i class="far fa-dot-circle nav-icon"></i>
-                                                <p>J.S.S 2</p>
+                                                <p>Year 7</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="./delstud?id=J.S.S 3" class="nav-link">
+                                            <a href="./delstud?id=Year 8" class="nav-link">
                                                 <i class="far fa-dot-circle nav-icon"></i>
-                                                <p>J.S.S 3</p>
+                                                <p>Year 8</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="./delstud?id=S.S.S 1" class="nav-link">
+                                            <a href="./delstud?id=Year 9" class="nav-link">
                                                 <i class="far fa-dot-circle nav-icon"></i>
-                                                <p>S.S.S 1</p>
+                                                <p>Year 9</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="./delstud?id=S.S.S 2" class="nav-link">
+                                            <a href="./delstud?id=Year 10" class="nav-link">
                                                 <i class="far fa-dot-circle nav-icon"></i>
-                                                <p>S.S.S 2</p>
+                                                <p>Year 10</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="./delstud?id=S.S.S 3" class="nav-link">
+                                            <a href="./delstud?id=Year 11" class="nav-link">
                                                 <i class="far fa-dot-circle nav-icon"></i>
-                                                <p>S.S.S 3</p>
+                                                <p>Year 11</p>
                                             </a>
                                         </li>
                                     </ul>
