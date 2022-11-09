@@ -1,0 +1,505 @@
+@charset "UTF-8";
+@import url("../css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,600;1,700&display=swap");
+@font-face {
+  font-family: hynitrfont;
+  src: url(../font/Questrial-Regular.ttf);
+  /* font-weight: bold; */
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(../font/Poppins-Black.ttf);
+  /* font-weight: bold; */
+}
+
+@font-face {
+  font-family: inter;
+  src: url(../font/Inter-Medium.ttf);
+  /* font-weight: bold; */
+}
+
+@font-face {
+  font-family: interbold;
+  src: url(../font/Inter-ExtraBold.ttf);
+  /* font-weight: bold; */
+}
+
+@font-face {
+  font-family: mntrat;
+  src: url(../font/Montserrat-ExtraBold.ttf);
+  /* font-weight: bold; */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: 0.5s ease-in;
+}
+
+::scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::scrollbar-thumb {
+  background: #eee;
+}
+
+/* Handle on hover */
+::scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "hynitrfont";
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #ffffff;
+}
+
+section {
+  margin: 0px;
+}
+
+.navbar {
+  background-color: #f4f9fb !important;
+}
+
+.offcanvas {
+  background-color: #f5f5f5;
+}
+
+.dropdown-menu {
+  background-color: #f5f5f5 !important;
+  border: none !important;
+}
+
+span .navbar-toggler-icon {
+  background-color: #389ddb !important;
+}
+
+.navbar-toggler {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.toggler-icon {
+  width: 100%;
+  height: 3px;
+  background-color: #389ddb;
+  display: block;
+  position: absolute;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+  border-radius: 10px;
+  margin-right: 100px !important;
+}
+
+/*when navigation is clicked*/
+.navbar-toggler .top-bar {
+  margin-top: 7px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler .middle-bar {
+  margin-top: 13.5px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler .bottom-bar {
+  margin-top: 0px;
+  transform: rotate(0deg);
+}
+
+/*state when navbar is collapsed*/
+.offcanvas-header .btn-close {
+  color: #389ddb !important;
+}
+
+.nav-item {
+  margin-left: 20px !important;
+}
+
+.nav-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000 !important;
+}
+
+.nav-link:hover {
+  color: #77bcd9 !important ;
+}
+
+/***************HERO SECTION******************/
+#hero {
+  background-color: #f4f9fb !important;
+  height: 100vh;
+}
+
+.hero h5 {
+  color: #77bcd9 !important;
+  font-family: inter !important;
+}
+
+.hero h1 {
+  color: #0d1d26;
+  font-family: mntrat !important;
+  font-style: normal;
+  font-size: 45px;
+  line-height: 140%;
+  margin-bottom: 0%;
+}
+
+.hero h1 span {
+  color: #77bcd9 !important;
+}
+
+.hero p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.hero .find-btn {
+  color: #ffffff;
+  width: 197px;
+  height: 57px;
+  padding: 15px;
+  background: #1b3a4c;
+  border-radius: 4px;
+  text-decoration: none !important;
+}
+
+.hero .find-btn:hover {
+  background-color: transparent;
+  border: 2px solid #1b3a4c;
+  color: #1b3a4c;
+}
+
+.hero .line {
+  width: 60px;
+  height: 2px;
+  margin-top: 0.7rem;
+  border-radius: 50px;
+  background-color: #77bcd9 !important;
+}
+
+.hero .mobilevieshow {
+  display: block;
+}
+
+.hero .mobileviewhide {
+  display: none;
+}
+
+/***************HERO SECTION ENDS******************/
+
+#round {
+  background-color: #77bcd9;
+  border-radius: 20px;
+  padding: 9%;
+}
+
+#round p {
+  font-size: 18px;
+}
+
+.card {
+  border-radius: 10px;
+  border: none;
+}
+
+/***************GLAD YOU TOOK THE BOLD STEP ******************/
+#glad-you {
+  background-color: #fff !important;
+}
+
+#glad-you h1 {
+  font-family: mntrat;
+}
+
+#glad-you p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+div.button .contact-btn {
+  color: #ffffff;
+  width: 197px;
+  height: 57px;
+  padding: 15px;
+  background: #1b3a4c;
+  border-radius: 4px;
+  text-decoration: none !important;
+}
+
+div.button .contact-btn:hover {
+  background-color: transparent;
+  border: 2px solid #1b3a4c;
+  color: #1b3a4c;
+}
+
+/***************GLAD YOU TOOK THE BOLD STEP ENDS******************/
+
+/************AWESOME FEATURES*/
+#awesome-features {
+  background-color: #f5f5f5;
+  color: #0d1d26;
+}
+#awesome-features h1 {
+  font-family: "Poppins";
+}
+#awesome-features p {
+  font-size: 18px;
+  line-height: 25px;
+}
+#awesome-features .card {
+  background-color: #f4f9fb;
+  border-radius: 16px;
+  border: none;
+  height: 450px;
+  width: 100%;
+  padding: 30px;
+  font-family: "Questrial";
+}
+
+/* TEAM MEMBERS SECTION */
+/* ******************************** */
+#team-section {
+  background-color: #fff;
+}
+#team-section h1 {
+  color: #77bcd9 !important;
+  font-family: mntrat !important;
+}
+#team-section p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.team-card {
+  border: 2px solid #ebeaed;
+  padding: 30px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  display: none;
+}
+#team-section a {
+  height: 50px;
+  width: 140px;
+  background: transparent !important;
+  text-decoration: none;
+  font-weight: 400;
+  border: 1px solid #1b3a4c;
+  color: #1b3a4c !important;
+  border-radius: 8px;
+  padding: 12px !important;
+}
+#team-section a:hover {
+  background-color: #1b3a4c !important;
+  color: #ffffff !important;
+}
+/*team section ende*/
+
+/* Subscribe Starts */
+#subscribe {
+  background-color: #f5f5f5;
+}
+#subscribe input {
+  border: 1px solid #1b3a4c;
+  background-color: #ffffff !important;
+  border-radius: 5px;
+  padding: 20px;
+}
+#subscribe input.textarea {
+  background-color: #ffffff;
+}
+.subscribe-btn {
+  background-color: #1b3a4c;
+  border-radius: 7px;
+  border: none;
+}
+#testimonials {
+  background-color: #f5f5f5;
+}
+.testimonials .slide img {
+  width: 50px;
+  margin-right: 20px;
+}
+.testimonials .card1 {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 380px;
+  width: 100%;
+  /* position:relative;
+  top: -30%;
+ right: 20px; */
+}
+/* .testimonials .card2{
+
+  border: 2px solid rgba(102, 102, 102, 0.08); 
+  filter: drop-shadow(0px 10px 5px rgba(119, 188, 217, 0.03));
+  border-radius: 10px;
+  height: 380px;
+  width: 100%;
+  position:relative;
+  top: 30%;
+ left: 40px; 
+
+} */
+footer {
+  position: relative;
+}
+/* scroll up */
+#myBtn {
+  position: absolute;
+  bottom: 65px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* view team */
+.view-button {
+  border: #0d1d2620 solid 1px;
+}
+footer .links img {
+  width: 30px !important;
+}
+/********** RESPONSIVENESS **********/
+
+/* For 480 Resolution - Mobile*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* STYLES GO HERE */
+  /** .hero .line {
+    width: 80px;
+    height: 5px;
+    border-radius: 50px;
+    position: absolute;
+    top: 23%;
+    background-color: #77bcd9 !important;
+  }
+  .hero .curved-line img {
+    float: right; 
+    position: absolute;
+    top: 64%;
+    left: 17%;
+  } */
+
+  #features h2 {
+    font-size: 24px;
+  }
+
+  .foot_div {
+    margin-top: 20px;
+  }
+
+  .achieve {
+    font-size: 2rem;
+  }
+
+  .hero a.btn {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .hero .button {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .hero img {
+    float: inline-start;
+  }
+
+  .hero h1 {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 140%;
+    /* or 34px */
+    text-align: center;
+  }
+
+  .hero p {
+    padding-left: 10px;
+  }
+
+  .hero .mobilevieshow {
+    display: none;
+  }
+
+  .hero .mobileviewhide {
+    display: block;
+  }
+
+  .gld {
+    margin-left: 0.5px;
+  }
+
+  #round {
+    padding-bottom: 1%;
+  }
+
+  #round h2 {
+  }
+}
+/* For 640 Resolution - mobile */
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
+}
+
+/* For 1024 Resolution - laptop 1 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* STYLES GO HERE */
+}
+
+/* For 1366 Resolution  -- laptop 2*/
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {
+  /* STYLES GO HERE */
+}
+
+/** desktop screen */
+@media only screen and (min-width: 1370px) and (max-width: 1605px) {
+  /* STYLES GO HERE */
+}
+
+/*Ipad Orientation : Landscape */
+@media only screen and (orientation: landscape) and (min-device-pixel-ratio: 1) and (min-device-width: 768px) and (max-device-width: 1007px) {
+  /* STYLES GO HERE */
+}
+
+/*ipad Orientation : Portrait */
+@media only screen and (orientation: portrait) and (min-device-pixel-ratio: 1) and (min-device-width: 768px) and (max-device-width: 1007px) {
+  /* STYLES GO HERE */
+}

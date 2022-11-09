@@ -18,113 +18,128 @@ if (isset($_SESSION['code'])) {
 }
  ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
     <title><?php echo $call['school']?></title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-    <link rel="icon" href="dist/img/logo.png" type="image/ico" />
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
-    <!-- summernote -->
-    <link rel="stylesheet" href="admin/plugins/summernote/summernote-bs4.css">
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+    <!-- Hynitr's Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="ID Card Temp/css/style.css" />
+
+    <style>
+    .card {
+
+        height: 336px;
+        width: 192px;
+        background-color: gold;
+        background-image: url('ID Card Temp/img/idd.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card .card-header {
+
+        background-color: gold;
+        border: none;
+    }
+
+    #round {
+
+        background-color: #000;
+        color: #fff;
+        width: 172px;
+        height: 20px;
+        border-radius: 4px;
+        margin-bottom: 40px;
+    }
+    </style>
 </head>
-<!-- Main content -->
-<section class="content row" id="printableArea">
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <div class="pt-4">
-        <div style="width: 227px; background-color: gold;" class="card">
-            <div class="card-header text-center border-bottom-0">
 
-                <img src="dist/img/logo.png" width="30px" height="30px">
-                <h2 style="font-size: 16px;"><b><?php echo strtoupper($call['school'])?></b><br />
-                    <small style="font-size: 10px;"><?php echo $call['addr']?></small> <br />
-                    <small style="font-size: 10px;">&nbsp;&nbsp; Tel: <?php echo $call['tel']?></small>
-                </h2>
-            </div>
-            <div class="card-body pt-0">
-                <div class="row">
-                    <div class="col-7">
-                        <h2 class="lead"><b><?php echo $row['SurName']." ".$row['Middle Name']; ?></b></h2>
-                        <p class="text-sm">Gender: <b><?php echo $row['Gender']; ?></b>
-                            <span class="row" style=""><?php echo $row['AdminID']; ?></span>
-                        </p>
-                        <?php echo '
-                     <img width="133px" height="133px" src="upload/QRCard/'.$row['qrcode'].'">'
-                     ?>
+<body>
 
-                    </div>
-                    <div class="col-5 text-center">
-                        <?php echo '
-                      <img width="85px" height="90px" src="upload/studentDP/'.$row['Passport'].'" alt="" class="img-circle">';
-                      ?>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-    </div>
-
-    <!--back leave-->
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <div class="pt-4">
-        <div style="width: 227px; background-color: black;" class="card">
+    <section class="mt-5 px-5">
+        <div class="container">
             <div class="row">
-                <div class="col-14 pt-3">
-                    <ul style="list-style-type:disc; color: white" class="text-sm">
-                        <li style="font-size: 11px;">This identity card is an official<br /> document and relates to the
-                            person described.</li>
-                        <br />
-                        <li style="font-size: 11px;">Impersonation, alteration, destruction <br />or transfer of the
-                            authorized holder to another person is a penal offence.</li>
-                        <br />
-                        <li style="font-size: 11px;">If found, kindly return to the address<br /> stated below;</li>
-                    </ul>
-                    <div class="card-header text-center pt-0">
-                        <img src="dist/img/logo.png" width="28px" height="28px">
-                        <h2 style="font-size: 14px; color: white"><b><?php echo strtoupper($call['school']) ?></b><br />
-                            <small style="font-size: 10px;"><?php echo $call['addr']?></small>
-                            <small style="font-size: 10px;">&nbsp;Tel: <?php echo $call['tel']?></small>
-                            <small style="font-size: 8px;">&nbsp;Website: <?php echo $call['website']?></small>
-                        </h2>
+
+                <div class="card me-5 mb-5">
+
+                    <div class="justify-content-center mt-2 text-center">
+                        <img src="dist/img/logo.png" class="justify-content-center mt-2 text-center"
+                            style="width: 40px;">
+                        <h2 style="font-size: 12px;" class="fw-bold mb-0"><?php echo strtoupper($call['school'])?> </h6>
+                            <p id="addr" style="font-size: 9px;"><?php echo $call['addr']?></p>
+                            <p id="tel" style="font-size: 9px;" class="col-12">&nbsp;&nbsp; Tel: 09072959938,
+                                08136770523</p>
+                    </div>
+
+                    <div class="card-body justify-content-center text-center mb-0 mt-0">
+                        <img style="border-radius: 50%; width: 140px; height: 140px;"
+                            src="upload/studentDP/<?php echo $row['Passport'] ?>">
+                    </div>
+
+                    <div id="round">
+                        <div class="row">
+                            <div class="col-5">
+                                <img src="upload/QRCard/<?php echo $row['qrcode']; ?>" class="img-fluid"
+                                    style="width: 40px; margin-top: -25px; margin-left: -20px;">
+                            </div>
+                            <div class="col-7">
+                                <h6 style="margin-top: -7px; font-size: 11px; margin-left: -35px; font-weight: bold;">
+                                    <?php echo $row['SurName']." ".$row['Middle Name']; ?></h6>
+                            </div>
+                        </div>
+                        <p style="font-size: 8px; color: black; margin-left: 30px; margin-top: -5px;">
+                            www.deguidelightschool.com.ng</p>
                     </div>
 
                 </div>
-            </div>
-            <div class="card-footer pr-0 pl-0 pb-0 mt-0">
-                <div class="text-center pt-3">
-                    <p style="background-color: gold; font-size: 14px"><i><?php echo $call['tagline']?>
-                        </i></p>
 
+
+                <div class="card" style="background-color: #000;">
+                    <div class="container">
+                        <div class="col-12" style="margin-top: 40px;">
+                            <ul style="list-style-type:disc; color: white" class="text-sm">
+                                <li style="font-size: 11px;">This identity card is an official document and relates to
+                                    the
+                                    person described.</li>
+                                <br />
+                                <li style="font-size: 11px;">Impersonation, alteration, destruction or transfer of the
+                                    authorized holder to another person is a penal offence.</li>
+                                <br />
+                                <li style="font-size: 11px;">If found, kindly return to the address stated in front of
+                                    this card.</li>
+                            </ul>
+
+
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-    </div>
+    </section>
 
-</section>
-<!-- /.content -->
 
-<!-- Control Sidebar -->
-<aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-</aside>
-<!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-<script type="text/javascript">
-window.addEventListener("load", window.print());
-</script>
+    <script src="ID Card Temp/js/jquery.js"></script>
+    <script src="ID Card Temp/js/index.js"></script>
+    <script src="ID Card Temp/js/jquery.min.js "></script>
+    <script src="ID Card Temp/js/bootstrap.min.js "></script>
+    <script src="ID Card Temp/js/popper.min.js "></script>
+    <script src="ID Card Temp/js/fontawesome.min.js "></script>
+
 </body>
+
 
 </html>
 <?php
@@ -153,117 +168,128 @@ window.addEventListener("load", window.print());
 }
  ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
     <title><?php echo $call['school']?></title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-    <link rel="icon" href="dist/img/logo.png" type="image/ico" />
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
-    <!-- summernote -->
-    <link rel="stylesheet" href="admin/plugins/summernote/summernote-bs4.css">
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+    <!-- Hynitr's Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="ID Card Temp/css/style.css" />
+
+    <style>
+    .card {
+
+        height: 336px;
+        width: 192px;
+        background-color: gold;
+        background-image: url('ID Card Temp/img/idd.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card .card-header {
+
+        background-color: gold;
+        border: none;
+    }
+
+    #round {
+
+        background-color: #000;
+        color: #fff;
+        width: 172px;
+        height: 20px;
+        border-radius: 4px;
+        margin-bottom: 40px;
+    }
+    </style>
 </head>
-<!-- Main content -->
-<section class="content row" id="printableArea">
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <div class="pt-4">
-        <div style="width: 227px; background-color: gold;" class="card">
-            <div class="card-header text-center border-bottom-0">
-                <div class="ribbon-wrapper">
-                    <div style="padding: 0px;" class="ribbon bg-black">
-                        <span style="font-size: 6px; text-transform: none;">Govt. &nbsp;Approved</span>
-                    </div>
-                </div>
-                <img src="dist/img/logo.png" width="28px" height="28px">
-                <h2 style="font-size: 14px;"><b><?php echo strtoupper($call['school'])?></b><br />
-                    <small style="font-size: 9px;"><?php echo $call['addr']?></small>
-                    <small style="font-size: 9px;">&nbsp;&nbsp; Tel: <?php echo $call['tel']?></small>
-                </h2>
-            </div>
-            <div class="card-body pt-0">
-                <div class="row">
-                    <div class="col-7">
-                        <h2 class="lead"><b><?php echo $row['SurName']." ".$row['Middle Name']; ?></b></h2>
-                        <p class="text-sm">Gender: <b><?php echo $row['Gender']; ?></b>
-                            <span class="row" style=""><?php echo $row['AdminID']; ?></span>
-                        </p>
-                        <?php echo '
-                     <img width="150px" height="150px" src="upload/QRCard/'.$row['qrcode'].'">'
-                     ?>
 
-                    </div>
-                    <div class="col-5 text-center">
-                        <?php echo '
-                      <img width="85px" height="90px" src="upload/studentDP/'.$row['Passport'].'" alt="" class="img-circle ">';
-                      ?>
-                    </div>
-                </div>
-            </div>
+<body>
 
-        </div>
-    </div>
 
-    <!--back leave-->
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <div class="pt-4">
-        <div style="width: 227px; background-color: black;" class="card">
+    <section class="mt-5 px-5">
+        <div class="container">
             <div class="row">
-                <div class="col-14 pt-3">
-                    <ul style="list-style-type:disc; color: white" class="text-sm">
-                        <li style="font-size: 11px;">This identity card is an official<br /> document and relates to the
-                            person described.</li>
-                        <br />
-                        <li style="font-size: 11px;">Impersonation, alteration, destruction <br />or transfer of the
-                            authorized holder to another person is a penal offence.</li>
-                        <br />
-                        <li style="font-size: 11px;">If found, kindly return to the address<br /> stated below;</li>
-                    </ul>
-                    <div class="card-header text-center pt-0">
-                        <img src="dist/img/logo.png" width="28px" height="28px">
-                        <h2 style="font-size: 14px; color: white"><b><?php echo strtoupper($call['school'])?></b><br />
-                            <small style="font-size: 10px;"><?php echo $call['addr']?></small>
-                            <small style="font-size: 10px;">&nbsp;Tel: <?php echo $call['tel']?></small>
-                            <small style="font-size: 8px;">&nbsp;Website: <?php echo $call['website']?></small>
-                        </h2>
+
+                <div class="card me-5 mb-5">
+
+                    <div class="justify-content-center mt-2 text-center">
+                        <img src="dist/img/logo.png" class="justify-content-center mt-2 text-center"
+                            style="width: 40px;">
+                        <h2 style="font-size: 12px;" class="fw-bold mb-0"><?php echo strtoupper($call['school'])?> </h6>
+                            <p id="addr" style="font-size: 9px;"><?php echo $call['addr']?></p>
+                            <p id="tel" style="font-size: 9px;" class="col-12">&nbsp;&nbsp; Tel: 09072959938,
+                                08136770523</p>
+                    </div>
+
+                    <div class="card-body justify-content-center text-center mb-0 mt-0">
+                        <img style="border-radius: 50%; width: 140px; height: 140px;"
+                            src="upload/studentDP/<?php echo $row['Passport'] ?>">
+                    </div>
+
+                    <div id="round">
+                        <div class="row">
+                            <div class="col-5">
+                                <img src="upload/QRCard/<?php echo $row['qrcode']; ?>" class="img-fluid"
+                                    style="width: 40px; margin-top: -25px; margin-left: -20px;">
+                            </div>
+                            <div class="col-7">
+                                <h6 style="margin-top: -7px; font-size: 11px; margin-left: -35px; font-weight: bold;">
+                                    <?php echo $row['SurName']." ".$row['Middle Name']; ?></h6>
+                            </div>
+                        </div>
+                        <p style="font-size: 8px; color: black; margin-left: 30px; margin-top: -5px;">
+                            www.deguidelightschool.com.ng</p>
                     </div>
 
                 </div>
-            </div>
-            <div class="card-footer pr-0 pl-0 pb-0 mt-0">
-                <div class="text-center pt-3">
-                    <p style="background-color: gold; font-size: 14px"><i><?php echo $call['tagline']?>
-                        </i></p>
 
+
+                <div class="card" style="background-color: #000;">
+                    <div class="container">
+                        <div class="col-12" style="margin-top: 40px;">
+                            <ul style="list-style-type:disc; color: white" class="text-sm">
+                                <li style="font-size: 11px;">This identity card is an official document and relates to
+                                    the
+                                    person described.</li>
+                                <br />
+                                <li style="font-size: 11px;">Impersonation, alteration, destruction or transfer of the
+                                    authorized holder to another person is a penal offence.</li>
+                                <br />
+                                <li style="font-size: 11px;">If found, kindly return to the address stated in front of
+                                    this card.</li>
+                            </ul>
+
+
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-    </div>
+    </section>
 
-</section>
-<!-- /.content -->
 
-<!-- Control Sidebar -->
-<aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-</aside>
-<!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-<script type="text/javascript">
-window.addEventListener("load", window.print());
-</script>
+    <script src="ID Card Temp/js/jquery.js"></script>
+    <script src="ID Card Temp/js/index.js"></script>
+    <script src="ID Card Temp/js/jquery.min.js "></script>
+    <script src="ID Card Temp/js/bootstrap.min.js "></script>
+    <script src="ID Card Temp/js/popper.min.js "></script>
+    <script src="ID Card Temp/js/fontawesome.min.js "></script>
+
 </body>
+
 
 </html>
 <?php
